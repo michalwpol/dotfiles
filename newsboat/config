@@ -24,47 +24,40 @@ bind-key U show-urls
 bind-key x pb-delete
 
 # Basic colors
-color listnormal color7 default
-color listfocus color7 default bold
-color listnormal_unread color10 default
-color listfocus_unread color10 default bold
+color listnormal default default
+color listfocus default default bold
+color listnormal_unread color14 default
+color listfocus_unread color14 default bold
 color info color14 default bold
-color article color7 default
+color article default default
 
 # Feedlist colors
-highlight feedlist "\\[--APPS-\\]" color2 default bold
-highlight feedlist "\\[---IT--\\]"  color4 default bold
-highlight feedlist "\\[--SEKS-\\]" color5 default bold
-highlight feedlist "\\[YOUTUBE\\]" color9 default bold
-highlight feedlist "\\[-REDDIT\\]" color1 default bold
+highlight feedlist "\\Starred items" color9 default bold
+highlight feedlist "\\[--APPS-\\]" color12 default bold
+highlight feedlist "\\[---IT--\\]"  color11 default bold
+highlight feedlist "\\[--SEKS-\\]" color15 default bold
+highlight feedlist "\\[YOUTUBE\\]" color1 default bold
+highlight feedlist "\\[-REDDIT\\]" color9 default bold
 
-highlight feedlist "\\[HUMOR\\]" color13 default bold
-highlight feedlist "\\[--IT-\\]"  color4 default bold
+highlight feedlist "\\[HUMOR\\]" color15 default bold
+highlight feedlist "\\[--IT-\\]"  color11 default bold
 highlight feedlist "\\[LINUX\\]" color12 default bold
 highlight feedlist "\\[ŚWIAT\\]" color6 default bold
-highlight feedlist "\\[NAUKA\\]" color10 default bold
-highlight feedlist "\\[-GRY-\\]" color15 default bold
+highlight feedlist "\\[NAUKA\\]" color3 default bold
+highlight feedlist "\\[-GRY-\\]" color10 default bold
 highlight feedlist "[(][0-9]+/[0-9]+[)]" color8 default bold
 
 # Article colors
-highlight article "(^Feed:.*|^Title:.*|^Author:.*)" cyan default bold
-highlight article "(^Link:.*|^Date:.*)" color7 default bold
-highlight article "https?://[^ ]+" green default
-highlight article "^(Title):.*$" blue default
-highlight article "\\[[0-9][0-9]*\\]" green default
-highlight article "\\[image\\ [0-9]+\\]" green default
-highlight article "\\[embedded flash: [0-9][0-9]*\\]" green default bold
-highlight article ":.*\\(link\\)$" cyan default
-highlight article ":.*\\(image\\)$" blue default
-highlight article ":.*\\(embedded flash\\)$" magenta default
+highlight article "(^Feed:.*)" color10 default bold
+highlight article "(^Author:.*)" color14 default bold
+highlight article "(^Date:.*)" color12 default bold
+highlight article "(^Link:.*)" color3 default bold
+highlight article "https?://[^ ]+" color11 default
+highlight article "^(Title):.*$" color11 default bold
+highlight article "\\[[0-9][0-9]*\\]" color12 default bold
 
-# freshrss connection
-urls-source "freshrss"
-freshrss-url "url"
-freshrss-login "username"
-freshrss-password "api_password"
-freshrss-flag-star "s"
-freshrss-min-items 1000
+# RSS Server configuration
+include "~/.privet/rss_srv_config"
 
 # Additional configuration
 auto-reload yes

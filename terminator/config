@@ -1,0 +1,27 @@
+[global_config]
+  title_transmit_fg_color = "#f1f0d9"
+  title_transmit_bg_color = "#e8864e"
+  title_inactive_fg_color = "#f1f0d9"
+  title_inactive_bg_color = "#847b8f"
+[keybindings]
+[profiles]
+  [[default]]
+    background_color = "#232323"
+    foreground_color = "#f1f0d9"
+    palette = "#373b42:#ca563e:#3e6b5a:#e7b550:#4ea9c1:#847b8f:#94c1ba:#6d423e:#847b8f:#e8864e:#649451:#ecd999:#a5dbd0:#8f6540:#f1ba8e:#aa8537"
+    use_system_font = False
+    title_hide_sizetext = True
+    title_transmit_bg_color = "#62a0ea"
+    title_receive_bg_color = "#ffa348"
+    title_font = Source Code Pro Semi-Bold 9
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+      size = 1600, 900
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+[plugins]
