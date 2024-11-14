@@ -1,4 +1,4 @@
-currency = "SATS"
+currency = "USD"
 default_view = "favorites"
 default_chart_range = "1Y"
 api = "coingecko"
@@ -99,7 +99,7 @@ enable_mouse = true
   character = "*"
   columns = ["name", "symbol", "price", "24h_change", "7d_change"]
   compact_notation = false
-  names = ["Bitcoin", "Ethereum", "Tether"]
+  names = ["Bitcoin", "Tether"]
 
 [portfolio]
   columns = ["rank", "name", "symbol", "price", "holdings", "balance", "1h_change", "24h_change", "7d_change", "percent_holdings", "cost_price", "cost", "pnl", "pnl_percent", "last_updated"]

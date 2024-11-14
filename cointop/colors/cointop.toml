@@ -36,21 +36,21 @@ table_column_change_up_fg = "green"
 table_column_change_up_bg = "default"
 table_column_change_up_bold = false
 
-table_header_fg = "black"
-table_header_bg = "cyan"
+table_header_fg = "default"
+table_header_bg = "default"
 table_header_bold = true
 
 table_header_column_active_fg = "default"
-table_header_column_active_bg = "cyan"
-table_header_column_active_bold = false
+table_header_column_active_bg = "default"
+table_header_column_active_bold = true
 
 table_row_fg = "default"
 table_row_bg = "default"
 table_row_bold = false
 
-table_row_active_fg = "black"
-table_row_active_bg = "cyan"
-table_row_active_bold = false
+table_row_active_fg = "default"
+table_row_active_bg = "default"
+table_row_active_bold = true
 
 table_row_favorite_fg = "yellow"
 table_row_favorite_bg = "default"
