@@ -1,0 +1,57 @@
+colorscheme = "cointop"
+
+menu_header_fg = "default"
+menu_header_bg = "green"
+menu_header_bold = false
+
+menu_label_fg = "green"
+menu_label_bg = "defaul"
+menu_label_bold = true
+
+menu_label_active_fg = "green"
+menu_label_active_bg = "default"
+menu_label_active_bold = true
+
+searchbar_fg = "yellow"
+searchbar_bg = "default"
+searchbar_bold = false
+
+statusbar_fg = "black"
+statusbar_bg = "cyan"
+statusbar_bold = true
+
+table_column_price_fg = "yellow"
+table_column_price_bg = "default"
+table_column_price_bold = true
+
+table_column_change_fg = "green"
+table_column_change_bg = "default"
+table_column_change_bold = false
+
+table_column_change_down_fg = "red"
+table_column_change_down_bg = "default"
+table_column_change_down_bold = false
+
+table_column_change_up_fg = "green"
+table_column_change_up_bg = "default"
+table_column_change_up_bold = false
+
+table_header_fg = "black"
+table_header_bg = "cyan"
+table_header_bold = true
+
+table_header_column_active_fg = "default"
+table_header_column_active_bg = "cyan"
+table_header_column_active_bold = false
+
+table_row_fg = "default"
+table_row_bg = "default"
+table_row_bold = false
+
+table_row_active_fg = "black"
+table_row_active_bg = "cyan"
+table_row_active_bold = false
+
+table_row_favorite_fg = "yellow"
+table_row_favorite_bg = "default"
+table_row_favorite_bold = false
