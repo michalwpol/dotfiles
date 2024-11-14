@@ -1,13 +1,14 @@
 ###############################################
 # MICHALWPOL'S CONFIG FILE FOR NEWSBOAT
 #
-# Dependancies: qutebrowser youtube-dl mpv 
+# Dependancies: w3m youtube-dl mpv 
 ###############################################
 
+# Shortcuts
 bind-key j down
 bind-key k up
 bind-key j next articlelist
-bind-key k prev articlelist 
+bind-key k prev articlelist
 bind-key J next-feed articlelist
 bind-key K prev-feed articlelist
 bind-key G end
@@ -22,35 +23,61 @@ bind-key D pb-download
 bind-key U show-urls
 bind-key x pb-delete
 
-color listnormal color24 default
-color listfocus color24 default bold 
-color listnormal_unread yellow default
-color listfocus_unread black yellow standout bold
-color info color40 default
-color article color248 default
+# Basic colors
+color listnormal color7 default
+color listfocus color7 default bold
+color listnormal_unread color10 default
+color listfocus_unread color10 default bold
+color info color14 default bold
+color article color7 default
 
-highlight feedlist ".*(0/0))" black
+# Feedlist colors
+highlight feedlist "\\[--APPS-\\]" color2 default bold
+highlight feedlist "\\[---IT--\\]"  color4 default bold
+highlight feedlist "\\[--SEKS-\\]" color5 default bold
+highlight feedlist "\\[YOUTUBE\\]" color9 default bold
+highlight feedlist "\\[-REDDIT\\]" color1 default bold
+
+highlight feedlist "\\[HUMOR\\]" color13 default bold
+highlight feedlist "\\[--IT-\\]"  color4 default bold
+highlight feedlist "\\[LINUX\\]" color12 default bold
+highlight feedlist "\\[ŚWIAT\\]" color6 default bold
+highlight feedlist "\\[NAUKA\\]" color10 default bold
+highlight feedlist "\\[-GRY-\\]" color15 default bold
+highlight feedlist "[(][0-9]+/[0-9]+[)]" color8 default bold
+
+# Article colors
 highlight article "(^Feed:.*|^Title:.*|^Author:.*)" cyan default bold
-highlight article "(^Link:.*|^Date:.*)" default default
+highlight article "(^Link:.*|^Date:.*)" color7 default bold
 highlight article "https?://[^ ]+" green default
 highlight article "^(Title):.*$" blue default
-highlight article "\\[[0-9][0-9]*\\]" green default 
-highlight article "\\[image\\ [0-9]+\\]" green default 
+highlight article "\\[[0-9][0-9]*\\]" green default
+highlight article "\\[image\\ [0-9]+\\]" green default
 highlight article "\\[embedded flash: [0-9][0-9]*\\]" green default bold
 highlight article ":.*\\(link\\)$" cyan default
 highlight article ":.*\\(image\\)$" blue default
 highlight article ":.*\\(embedded flash\\)$" magenta default
 
+# freshrss connection
+urls-source "freshrss"
+freshrss-url "url"
+freshrss-login "username"
+freshrss-password "api_password"
+freshrss-flag-star "s"
+freshrss-min-items 1000
+
+# Additional configuration
 auto-reload yes
 reload-time 10
 reload-threads 100
+download-full-page yes
 
-browser "qutebrowser %u >> ~/.log/apps 2>&1 &"
-# browser "linkhandler"
-# external-url-viewer "urlwiew"
-# html-renderer "w3m -dump -T text/html"
+browser "w3m -T text/html %u"
+cache-file "~/.config/newsboat/cache.db"
+html-renderer "w3m -dump -T text/html"
 
-macro f set browser "firefox %u >> ~/.log/apps 2>&1 &" ; open-in-browser ; set browser "qutebrowser %u >> ~/.log/apps 2>&1 &"
-macro y set browser "mpv --geometry=1366x768 %u >> ~/.log/apps 2>&1 &" ; open-in-browser ; set browser "qutebrowser %u >> ~/.log/apps 2>&1 &"
-macro d set browser "youtube-dl" ; open-in-browser ; set browser "qutebrowser %u >> ~/.log/apps 2>&1 &"
-macro a set browser "youtube-dl -x --audio-format mp3" ; open-in-browser ; set browser "qutebrowser %u >> ~/.log/apps 2>&1 &"
+# Macros
+macro f set browser "w3m %u >> ~/.log/apps 2>&1 &" ; open-in-browser ; set browser "w3m %u >> ~/.log/apps 2>&1 &"
+macro y set browser "mpv --geometry=1366x768 %u >> ~/.log/apps 2>&1 &" ; open-in-browser ; set browser "w3m %u >> ~/.log/apps 2>&1 &"
+macro d set browser "youtube-dl" ; open-in-browser ; set browser "w3m %u >> ~/.log/apps 2>&1 &"
+macro a set browser "youtube-dl -x --audio-format mp3" ; open-in-browser ; set browser "w3m %u >> ~/.log/apps 2>&1 &"
