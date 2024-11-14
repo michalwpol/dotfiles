@@ -48,12 +48,12 @@ highlight feedlist "\\[-GRY-\\]" color10 default bold
 highlight feedlist "[(][0-9]+/[0-9]+[)]" color8 default bold
 
 # Article colors
-highlight article "(^Feed:.*)" color10 default bold
+highlight article "(^Feed:.*)" color10 default bold 
+highlight article "^(Title):.*$" color11 default bold reverse
 highlight article "(^Author:.*)" color14 default bold
-highlight article "(^Date:.*)" color12 default bold
+highlight article "(^Date:.*)" color12 default bold 
 highlight article "(^Link:.*)" color3 default bold
 highlight article "https?://[^ ]+" color11 default
-highlight article "^(Title):.*$" color11 default bold
 highlight article "\\[[0-9][0-9]*\\]" color12 default bold
 
 # RSS Server configuration
