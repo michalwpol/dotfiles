@@ -4,16 +4,29 @@
   split_vert = <Primary><Alt>equal
 [profiles]
   [[default]]
-    background_color = "#232323"
+    background_color = "#282828"
     font = Source Code Pro Medium 10
-    foreground_color = "#f1f0d9"
+    foreground_color = "#ebdbb2"
     scrollbar_position = hidden
     scrollback_lines = 5000
-    palette = "#373b42:#ca563e:#3e6b5a:#e7b550:#4ea9c1:#847b8f:#94c1ba:#6d423e:#847b8f:#e8864e:#649451:#ecd999:#a5dbd0:#8f6540:#f1ba8e:#aa8537"
+    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
+    use_system_font = False
+    bold_is_bright = True
+    title_hide_sizetext = True
+    title_receive_bg_color = "#c59820"
+    title_use_system_font = False
+    title_font = Source Code Pro Semi-Bold 9
+  [[michalwpol-dark]]
+    cursor_fg_color = "#282828"
+    cursor_bg_color = "#ebdbb2"
+    font = Source Code Pro Medium 10
+    foreground_color = "#ffffff"
+    scrollbar_position = hidden
+    scrollback_lines = 5000
+    palette = "#565656:#ac4f4f:#88ab77:#d0d9ad:#677088:#cdcdb4:#445362:#ffffff:#656565:#e85555:#8ccd6c:#c5d67d:#647396:#cdb4c9:#505b6c:#c0c0c0"
     use_system_font = False
     title_hide_sizetext = True
-    title_transmit_bg_color = "#62a0ea"
-    title_receive_bg_color = "#ffa348"
+    title_receive_bg_color = "#ac4f4f"
     title_use_system_font = False
     title_font = Source Code Pro Semi-Bold 9
 [layouts]
@@ -26,4 +39,5 @@
       type = Terminal
       parent = window0
       profile = default
+      command = ""
 [plugins]

@@ -24,28 +24,30 @@ bind-key U show-urls
 bind-key x pb-delete
 
 # Basic colors
-color listnormal default default
-color listfocus default default bold
-color listnormal_unread color14 default
-color listfocus_unread color14 default bold
-color info color14 default bold
+color background default default
+color listnormal color8 default
+color listfocus color8 default underline
+color listnormal_unread color5 default bold
+color listfocus_unread color5 default bold underline
+color info color6 color3 bold
 color article default default
 
+
 # Feedlist colors
-highlight feedlist "\\Starred items" color9 default bold
+highlight feedlist "Starred items" color9 default bold
 highlight feedlist "\\[--APPS-\\]" color12 default bold
-highlight feedlist "\\[---IT--\\]"  color11 default bold
-highlight feedlist "\\[--SEKS-\\]" color15 default bold
-highlight feedlist "\\[YOUTUBE\\]" color1 default bold
-highlight feedlist "\\[-REDDIT\\]" color9 default bold
+highlight feedlist "\\[---IT--\\]" color10 default bold
+highlight feedlist "\\[--SEKS-\\]" color13 default bold
+highlight feedlist "\\[YOUTUBE\\]" color9 default bold
+highlight feedlist "\\[-REDDIT\\]" color1 default bold
 
 highlight feedlist "\\[HUMOR\\]" color15 default bold
-highlight feedlist "\\[--IT-\\]"  color11 default bold
+highlight feedlist "\\[--IT-\\]" color10 default bold
 highlight feedlist "\\[LINUX\\]" color12 default bold
-highlight feedlist "\\[ŚWIAT\\]" color6 default bold
-highlight feedlist "\\[NAUKA\\]" color3 default bold
-highlight feedlist "\\[-GRY-\\]" color10 default bold
-highlight feedlist "[(][0-9]+/[0-9]+[)]" color8 default bold
+highlight feedlist "\\[ŚWIAT\\]" color14 default bold
+highlight feedlist "\\[NAUKA\\]" color11 default bold
+highlight feedlist "\\[-GRY-\\]" color3 default bold
+highlight feedlist "[(][0-9]+/[0-9]+[)]" color8 default 
 
 # Article colors
 highlight article "(^Feed:.*)" color10 default bold 
