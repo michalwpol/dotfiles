@@ -11,17 +11,5 @@ italic = { family = "JetBrains Mono", style = "Medium Italic" }
 bold_italic = { family = "JetBrains Mono", style = "Bold Italic" }
 size = 9
 
-# Base16 Tomorrow Night 256 - alacritty color config
-# Chris Kempson (http://chriskempson.com)
-
-# Default colors
-#[colors.primary]
-#background = '0x1d1f21'
-#foreground = '0xc5c8c6'
-
-# Colors the cursor will use if `custom_cursor_colors` is true
-#[colors.cursor]
-#text = '0x1d1f21'
-#cursor = '0xc5c8c6'
-
-
+[terminal.shell]
+program = "/usr/bin/zsh"
