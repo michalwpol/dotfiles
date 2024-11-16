@@ -19,7 +19,7 @@
   [[michalwpol-dark]]
     cursor_fg_color = "#282828"
     cursor_bg_color = "#ebdbb2"
-    font = Source Code Pro Medium 10
+    font = JetBrains Mono 10
     foreground_color = "#ffffff"
     scrollbar_position = hidden
     scrollback_lines = 5000
@@ -28,7 +28,7 @@
     title_hide_sizetext = True
     title_receive_bg_color = "#ac4f4f"
     title_use_system_font = False
-    title_font = Source Code Pro Semi-Bold 9
+    title_font = JetBrains Mono Semi-Bold 9
 [layouts]
   [[default]]
     [[[window0]]]
