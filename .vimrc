@@ -17,5 +17,22 @@ nnoremap <C-n> :NERDTreeToggle<CR>
 
 set relativenumber
 set number
+set clipboard=unnamedplus
+
+if has('clipboard')
+  let g:clipboard = {
+        \ 'name': 'wl-clipboard',
+        \ 'copy': {
+        \   '+': 'wl-copy',
+        \   '*': 'wl-copy',
+        \  },
+        \ 'paste': {
+        \   '+': 'wl-paste',
+        \   '*': 'wl-paste',
+        \  },
+        \ }
+endif
+
+
 
 

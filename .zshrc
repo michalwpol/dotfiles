@@ -1,9 +1,7 @@
-# Created by newuser for 5.9
-
 # .zshrc - Podstawowa konfiguracja dla Zsh
 
 # Ustawienia środowiska
-export EDITOR=vim       # Domyślny edytor
+export EDITOR=vimx      # Domyślny edytor
 export LANG=pl_PL.UTF-8 # Ustawienia językowe
 
 # Historia poleceń
@@ -15,9 +13,14 @@ setopt SHARE_HISTORY    # Udostępniaj historię między sesjami
 
 # Wygląd prompta
 autoload -U promptinit && promptinit
-#PROMPT='%F{green}%n@%m%f %F{blue}%~%f %# '
+PROMPT='%F{green}%n@%m%f %F{blue}%~%f %# '
 PROMPT="%B%F{10}%n%f%b%B%F{14}[%f%b%B%F{14}%m%f%b%B%F{14}]%f%b%B%F{14}:%f%b %B%F{11}%d%f%b
 %B%F{11}>> %f%b"
+
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+autoload -U colors && colors
 
 
 # Ułatwienia w terminalu
@@ -27,10 +30,21 @@ setopt PUSHD_SILENT      # Ukryj wyjście pushd
 setopt CORRECT           # Popraw literówki w poleceniach
 setopt NOCLOBBER         # Blokuj nadpisywanie plików przy użyciu ">"
 
-# Aliasów podstawowych
+# Załącz prywatne aliasy
+if [[ -f ~/.private/prywatne_aliasy ]]; then
+    source ~/.private/prywatne_aliasy
+fi
+
+# Aliasy podstawowe
 alias ll='ls -lah'       # Szczegółowy widok plików
 alias la='ls -A'         # Ukryte pliki
 alias l='ls -CF'         # Widok katalogów
+alias vim='nvim'         # Domyślne uruchamianie nvim
+
+# Aliasy dla Git
+alias gcom='git commit -m "Kolejne zmiany"'
+alias gadd='git add .'
+alias gpush='git push'
 
 # Kolory dla ls
 if command -v dircolors &>/dev/null; then
@@ -50,6 +64,13 @@ export LS_COLORS="di=34:fi=0:ln=36:pi=33:so=35:bd=33;1:cd=33;1:or=31;1:mi=31;1"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
+
+# Mapowanie klawiszy
+
+bindkey "^[[3~" delete-char
+bindkey "^[[2~" overwrite-mode
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
 
 
 
