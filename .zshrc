@@ -1,7 +1,7 @@
 # .zshrc - Podstawowa konfiguracja dla Zsh
 
 # Ustawienia środowiska
-export EDITOR=vimx      # Domyślny edytor
+export EDITOR=nvim      # Domyślny edytor
 export LANG=pl_PL.UTF-8 # Ustawienia językowe
 
 # Historia poleceń
@@ -71,6 +71,16 @@ bindkey "^[[3~" delete-char
 bindkey "^[[2~" overwrite-mode
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
+bindkey '^[[1;5D' backward-word  # Ctrl+← - przesuń w lewo o jedno słowo
+bindkey '^[[1;5C' forward-word   # Ctrl+→ - przesuń w prawo o jedno słowo
+
+# Wybierz z historii i wstaw polecenie
+fzf-history-widget() {
+  BUFFER=$(history | fzf --reverse | sed 's/ *[0-9]* *//')
+  CURSOR=$#BUFFER
+}
+zle -N fzf-history-widget
+bindkey '^R' fzf-history-widget  # Ctrl+R wywołuje wybór z historii
 
 
 

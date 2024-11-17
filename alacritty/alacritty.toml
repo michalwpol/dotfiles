@@ -7,6 +7,5 @@ size = 10
 
 
 [terminal.shell]
-program = "/usr/bin/tmux"
-args = ["new-session", "-A", "-s", "default"]
+program = "/usr/bin/zsh"
 
