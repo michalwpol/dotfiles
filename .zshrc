@@ -4,6 +4,8 @@
 export EDITOR=nvim      # Domyślny edytor
 export LANG=pl_PL.UTF-8 # Ustawienia językowe
 
+
+
 # Historia poleceń
 HISTFILE=~/.zsh_history
 HISTSIZE=1000          # Liczba przechowywanych poleceń w sesji
