@@ -29,7 +29,7 @@ color listnormal color8 default
 color listfocus color8 default underline
 color listnormal_unread color3 default bold
 color listfocus_unread color3 default bold underline
-color info color13 default bold reverse
+color info color8 default bold inverted
 color article default default
 
 
