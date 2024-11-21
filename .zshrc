@@ -2,6 +2,7 @@
 
 # Ustawienia środowiska
 export EDITOR=nvim      # Domyślny edytor
+export VISUAL=nvim      
 export LANG=pl_PL.UTF-8 # Ustawienia językowe
 export MANPAGER='nvim +Man!'
 
@@ -21,6 +22,7 @@ PROMPT="%B%F{10}%n%f%b%B%F{14}[%f%b%B%F{14}%m%f%b%B%F{14}]%f%b%B%F{14}:%f%b %B%F
 
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/wikiman/widgets/widget.zsh
 
 autoload -U colors && colors
 
