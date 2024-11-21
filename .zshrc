@@ -3,7 +3,8 @@
 # Ustawienia środowiska
 export EDITOR=nvim      # Domyślny edytor
 export VISUAL=nvim      
-export LANG=pl_PL.UTF-8 # Ustawienia językowe
+export LANG=pl_PL.UTF-8
+export LC_ALL=pl_PL.UTF-8
 export MANPAGER='nvim +Man!'
 
 
