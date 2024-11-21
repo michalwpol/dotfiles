@@ -3,7 +3,7 @@
 # Ustawienia środowiska
 export EDITOR=nvim      # Domyślny edytor
 export LANG=pl_PL.UTF-8 # Ustawienia językowe
-
+export MANPAGER='nvim +Man!'
 
 
 # Historia poleceń
