@@ -9,11 +9,16 @@ export MANPAGER='nvim +Man!'
 
 
 # Historia poleceń
-HISTFILE=~/.zsh_history
-HISTSIZE=1000          # Liczba przechowywanych poleceń w sesji
-SAVEHIST=2000          # Liczba przechowywanych poleceń w pliku
-setopt HIST_IGNORE_DUPS # Ignoruj duplikaty w historii
-setopt SHARE_HISTORY    # Udostępniaj historię między sesjami
+
+# Konfiguracja historii
+HISTFILE=~/.zsh_history           # Plik, w którym będzie zapisana historia
+HISTSIZE=100000                   # Maksymalna liczba poleceń w historii
+SAVEHIST=100000                   # Liczba poleceń zapisywana do pliku
+setopt INC_APPEND_HISTORY         # Dodawaj polecenia do historii natychmiast po wykonaniu
+setopt SHARE_HISTORY              # Współdziel historię między sesjami
+setopt HIST_IGNORE_ALL_DUPS       # Usuwaj duplikaty
+setopt HIST_FIND_NO_DUPS          # Pomijaj duplikaty w historii
+
 
 # Wygląd prompta
 autoload -U promptinit && promptinit
@@ -57,6 +62,9 @@ if command -v dircolors &>/dev/null; then
   alias ls='ls --color=auto'
 fi
 
+# Aliasy dla yt-dlp
+alias ytwav='yt-dlp -f bestaudio --extract-audio --audio-format wav --audio-quality 0'
+
 # Wtyczki i autouzupełnianie (opcjonalnie)
 autoload -U compinit && compinit
 autoload -U bashcompinit && bashcompinit
@@ -79,13 +87,11 @@ bindkey "^[[F" end-of-line
 bindkey '^[[1;5D' backward-word  # Ctrl+← - przesuń w lewo o jedno słowo
 bindkey '^[[1;5C' forward-word   # Ctrl+→ - przesuń w prawo o jedno słowo
 
-# Wybierz z historii i wstaw polecenie
+# Wybierz z pełnej historii i wstaw polecenie
 fzf-history-widget() {
-  BUFFER=$(history | fzf --reverse | sed 's/ *[0-9]* *//')
+  BUFFER=$(fc -l 1 | fzf --reverse | sed 's/^[[:space:]]*[0-9]*[[:space:]]*//')
   CURSOR=$#BUFFER
 }
 zle -N fzf-history-widget
 bindkey '^R' fzf-history-widget  # Ctrl+R wywołuje wybór z historii
-
-
 

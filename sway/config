@@ -29,7 +29,7 @@ set $menu wmenu-run
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
-output * bg ~/Obrazy/Tapety/final-fantasy-vii-aerith-gainsborough-4k-7z.jpg fill
+output * bg ~/git/mwallpapers/Anime/Anime-6.jpg fill
 #
 # Example configuration:
 #

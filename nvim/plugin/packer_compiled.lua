@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/mwisniewski/.cache/nvim/packer_hererocks/2.1.1720049189/share/lua/5.1/?.lua;/home/mwisniewski/.cache/nvim/packer_hererocks/2.1.1720049189/share/lua/5.1/?/init.lua;/home/mwisniewski/.cache/nvim/packer_hererocks/2.1.1720049189/lib/luarocks/rocks-5.1/?.lua;/home/mwisniewski/.cache/nvim/packer_hererocks/2.1.1720049189/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/mwisniewski/.cache/nvim/packer_hererocks/2.1.1720049189/lib/lua/5.1/?.so"
+local package_path_str = "/home/michal/.cache/nvim/packer_hererocks/2.1.1720049189/share/lua/5.1/?.lua;/home/michal/.cache/nvim/packer_hererocks/2.1.1720049189/share/lua/5.1/?/init.lua;/home/michal/.cache/nvim/packer_hererocks/2.1.1720049189/lib/luarocks/rocks-5.1/?.lua;/home/michal/.cache/nvim/packer_hererocks/2.1.1720049189/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/michal/.cache/nvim/packer_hererocks/2.1.1720049189/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -76,12 +76,12 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["packer.nvim"] = {
     loaded = true,
-    path = "/home/mwisniewski/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    path = "/home/michal/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
   ["tokyonight.nvim"] = {
     loaded = true,
-    path = "/home/mwisniewski/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    path = "/home/michal/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
   }
 }
